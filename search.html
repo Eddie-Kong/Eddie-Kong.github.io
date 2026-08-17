@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search — Bedlington Terrier</title>
+<meta name="description" content="Search every page on this site. The index is generated from the pages themselves, so it cannot drift out of date.">
+<link rel="canonical" href="https://eddiekong.com/search.html">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Search — Bedlington Terrier">
+<meta property="og:description" content="Search every page on this site.">
+<meta property="og:image" content="https://eddiekong.com/dog.jpg">
+<meta property="og:url" content="https://eddiekong.com/search.html">
+<meta name="theme-color" content="#faf9f7">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐑</text></svg>">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="The Bedlington Journal" href="/feed.xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script>
+  try {
+    var t = localStorage.getItem("theme");
+    if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+</script>
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="wrap">
+
+  <nav class="nav">
+    <a class="nav-home" href="/">Bedlington</a>
+    <button class="theme-toggle" id="theme-toggle" type="button">☾ Dark</button>
+    <div class="nav-links">
+      <a href="/">Guide</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/numbers.html">Numbers</a>
+      <a href="/blog/">Journal</a>
+      <a href="/search.html" aria-current="page">Search</a>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <header class="page-head">
+      <p class="eyebrow">Every page, indexed</p>
+      <h1>Search</h1>
+      <p>
+        Searching happens entirely in your browser against
+        <code>data/search-index.json</code>, which <code>tools/gen.py</code> builds from
+        the pages themselves. Nothing is sent anywhere.
+      </p>
+    </header>
+
+    <form class="search-form" role="search" onsubmit="return false;">
+      <label class="eyebrow" for="search-input">Search this site</label>
+      <input class="search-input" id="search-input" type="search"
+             placeholder="coat, copper, Rothbury…" autocomplete="off" autofocus>
+      <p class="search-status" id="search-status">Loading the index…</p>
+    </form>
+
+    <ul class="search-results" id="search-results"></ul>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>eddiekong.com</p>
+    <p id="last-updated">Source on <a href="https://github.com/Eddie-Kong/Eddie-Kong.github.io" rel="noopener" target="_blank">GitHub</a></p>
+    <p><a href="/">Home</a> · <a href="/feed.xml">RSS</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>

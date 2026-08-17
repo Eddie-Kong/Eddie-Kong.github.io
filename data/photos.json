@@ -1,0 +1,13 @@
+{
+  "note": "Add a photo by dropping the file in the repo and appending an entry here. Nothing else needs to change.",
+  "photos": [
+    {
+      "src": "/dog.jpg",
+      "width": 1280,
+      "height": 1718,
+      "alt": "A white curly-coated Bedlington Terrier standing indoors, carrying a striped plush toy in its mouth.",
+      "caption": "Bringing the toy over, unprompted, for the ninth time today.",
+      "place": "At home"
+    }
+  ]
+}

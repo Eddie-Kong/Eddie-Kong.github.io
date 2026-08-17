@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Bedlington Journal</title>
+    <link>https://eddiekong.com/blog/</link>
+    <description>Longer pieces about living with a Bedlington Terrier.</description>
+    <language>en</language>
+    <atom:link href="https://eddiekong.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The coat is the whole job</title>
+      <link>https://eddiekong.com/blog/coat-and-clipping.html</link>
+      <guid isPermaLink="true">https://eddiekong.com/blog/coat-and-clipping.html</guid>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+      <description>A Bedlington does not shed its coat, so you deal with it instead. What clipping every six weeks actually involves, and why the breed looks the way it does in the ring.</description>
+    </item>
+    <item>
+      <title>Copper testing, explained plainly</title>
+      <link>https://eddiekong.com/blog/copper-testing.html</link>
+      <guid isPermaLink="true">https://eddiekong.com/blog/copper-testing.html</guid>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+      <description>The one health question to ask a Bedlington breeder, what the COMMD1 test does and does not tell you, and how to read the three possible results.</description>
+    </item>
+  </channel>
+</rss>

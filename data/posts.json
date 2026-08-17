@@ -1,0 +1,21 @@
+{
+  "note": "Add a post by writing blog/<slug>.html and appending an entry here, newest first.",
+  "posts": [
+    {
+      "slug": "coat-and-clipping",
+      "url": "/blog/coat-and-clipping.html",
+      "title": "The coat is the whole job",
+      "summary": "A Bedlington does not shed its coat, so you deal with it instead. What clipping every six weeks actually involves, and why the breed looks the way it does in the ring.",
+      "date": "2026-08-10",
+      "reading_minutes": 4
+    },
+    {
+      "slug": "copper-testing",
+      "url": "/blog/copper-testing.html",
+      "title": "Copper testing, explained plainly",
+      "summary": "The one health question to ask a Bedlington breeder, what the COMMD1 test does and does not tell you, and how to read the three possible results.",
+      "date": "2026-08-03",
+      "reading_minutes": 5
+    }
+  ]
+}

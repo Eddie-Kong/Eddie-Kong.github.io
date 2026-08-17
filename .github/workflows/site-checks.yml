@@ -1,0 +1,25 @@
+name: site checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Verifies three things at once:
+      #   - sitemap.xml / feed.xml / data/search-index.json are not stale
+      #   - no internal link points at a file that does not exist
+      #   - every data/*.json parses
+      # Standard library only, so there is nothing to install.
+      - name: Check generated files, links and JSON
+        run: python tools/gen.py --check

@@ -1,0 +1,84 @@
+{
+  "name": "Bedlington Terrier",
+  "former_name": "Rothbury Terrier",
+  "group": "Terrier",
+  "origin": {
+    "town": "Bedlington",
+    "county": "Northumberland",
+    "country": "England",
+    "lat": 55.13061,
+    "lon": -1.59319
+  },
+  "recognised": {
+    "akc": 1886,
+    "named_bedlington": 1825,
+    "pedigree_traced_to": 1782
+  },
+  "height": {
+    "unit": "in",
+    "male": { "min": 16, "max": 17.5, "preferred": 16.5 },
+    "female": { "min": 15, "max": 16.5, "preferred": 15.5 },
+    "note": "Breed standard. 1 in = 2.54 cm."
+  },
+  "weight": {
+    "unit": "lb",
+    "min": 17,
+    "max": 23,
+    "kg": { "min": 7.7, "max": 10.4 }
+  },
+  "lifespan": {
+    "unit": "years",
+    "min": 11,
+    "max": 16,
+    "uk_study_2024_mean": 13.7
+  },
+  "colours": [
+    {
+      "name": "Blue",
+      "swatch": "#7f8c96",
+      "note": "Born nearly black, lightens with maturity."
+    },
+    {
+      "name": "Liver",
+      "swatch": "#6b4f3f",
+      "note": "A warm brown; puppies start much darker."
+    },
+    {
+      "name": "Sandy",
+      "swatch": "#c8ab84",
+      "note": "The palest of the three."
+    }
+  ],
+  "colour_note": "Each of the three is also seen with tan points. Swatch values are approximations for display, not part of any standard.",
+  "traits": [
+    { "label": "Shedding", "value": 1, "max": 5, "note": "Very low — the coat needs clipping instead." },
+    { "label": "Grooming", "value": 4, "max": 5, "note": "Clipping every 6–8 weeks." },
+    { "label": "Energy", "value": 4, "max": 5, "note": "Needs to sprint, not just stroll." },
+    { "label": "Prey drive", "value": 4, "max": 5, "note": "Genuine terrier instinct." },
+    { "label": "Barking", "value": 2, "max": 5, "note": "Quieter indoors than most terriers." }
+  ],
+  "traits_note": "The 1–5 figures are editorial summaries of the breed's reputation, not measurements.",
+  "health": {
+    "headline": "Copper toxicosis",
+    "detail": "An inherited copper storage disorder in which copper accumulates in the liver instead of being cleared. Linked to the COMMD1 gene; a DNA test exists and responsible breeders screen for it.",
+    "inheritance": "Autosomal recessive"
+  },
+  "sources": [
+    {
+      "label": "AKC — Bedlington Terrier breed page",
+      "url": "https://www.akc.org/dog-breeds/bedlington-terrier/"
+    },
+    {
+      "label": "AKC — Official Standard of the Bedlington Terrier (PDF)",
+      "url": "https://images.akc.org/pdf/breeds/standards/BedlingtonTerrier.pdf"
+    },
+    {
+      "label": "AKC — Bedlington Terrier history",
+      "url": "https://www.akc.org/expert-advice/dog-breeds/bedlington-terrier-history/"
+    },
+    {
+      "label": "Wikipedia — Bedlington Terrier",
+      "url": "https://en.wikipedia.org/wiki/Bedlington_Terrier"
+    }
+  ]
+}
