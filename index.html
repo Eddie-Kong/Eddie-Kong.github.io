@@ -1,1 +1,425 @@
-Hello world!
+<!doctype html>
+<!--
+  Placeholder site for eddiekong.com.
+  The layout (hero / stat strip / numbered sections / media block / footer) is the
+  skeleton intended for the future self-introduction page — only the copy is about
+  the dog for now.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bedlington Terrier</title>
+<meta name="description" content="A short field guide to the Bedlington Terrier — the lamb-shaped terrier from Northumberland: origins, looks, temperament and care.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bedlington Terrier">
+<meta property="og:description" content="A lamb's coat over a lion's heart — a short field guide to the Bedlington Terrier.">
+<meta property="og:image" content="dog.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐑</text></svg>">
+<style>
+  :root {
+    --ground:   #faf9f7;
+    --ink:      #1a1a1a;
+    --muted:    #6b6b6b;
+    --hairline: #e2ded8;
+    --accent:   #3a5a78;
+    --panel:    #f2efe9;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground:   #14151a;
+      --ink:      #ece9e4;
+      --muted:    #9a978f;
+      --hairline: #2e3038;
+      --accent:   #8fb4d4;
+      --panel:    #1c1e25;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, .display {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+  }
+
+  a {
+    color: var(--accent);
+    text-underline-offset: 3px;
+  }
+
+  .wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 5vw, 4rem);
+  }
+
+  .eyebrow {
+    font-size: .72rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 1.5rem;
+  }
+
+  /* ---------- hero ---------- */
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: clamp(2rem, 5vw, 4.5rem);
+    align-items: center;
+    padding: clamp(3.5rem, 9vw, 7rem) 0 clamp(3rem, 7vw, 5rem);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.75rem, 8vw, 6rem);
+    line-height: .98;
+    letter-spacing: -.02em;
+    margin: 0;
+  }
+
+  .deck {
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--muted);
+    margin: 1.25rem 0 0;
+    padding-left: 1rem;
+    border-left: 2px solid var(--accent);
+  }
+
+  .lede {
+    margin: 1.75rem 0 0;
+    max-width: 46ch;
+  }
+
+  .portrait {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1280 / 1718;
+    object-fit: cover;
+    background: var(--panel);
+  }
+
+  figure { margin: 0; }
+
+  figcaption {
+    font-size: .82rem;
+    font-style: italic;
+    color: var(--muted);
+    margin-top: .7rem;
+  }
+
+  /* ---------- stat strip ---------- */
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .stat {
+    padding: 1.5rem 1.25rem;
+    border-left: 1px solid var(--hairline);
+  }
+
+  .stat:first-child { border-left: 0; padding-left: 0; }
+
+  .stat dt {
+    font-size: .68rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: .45rem;
+  }
+
+  .stat dd {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  /* ---------- sections ---------- */
+
+  section.chapter {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    gap: 0 2rem;
+    padding: clamp(2.75rem, 6vw, 4.5rem) 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .num {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    color: var(--accent);
+    letter-spacing: .1em;
+    padding-top: .55rem;
+  }
+
+  .chapter h2 {
+    font-size: clamp(1.6rem, 3.6vw, 2.3rem);
+    line-height: 1.15;
+    letter-spacing: -.01em;
+    margin: 0 0 1rem;
+  }
+
+  .chapter p {
+    max-width: 62ch;
+    margin: 0 0 1.05rem;
+  }
+
+  .chapter p:last-child { margin-bottom: 0; }
+
+  .note {
+    margin-top: 1.75rem;
+    padding: 1.25rem 1.4rem;
+    background: var(--panel);
+    border-left: 2px solid var(--accent);
+    max-width: 62ch;
+  }
+
+  .note strong {
+    display: block;
+    font-size: .7rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: .5rem;
+  }
+
+  .note p { font-size: .95rem; }
+
+  /* ---------- video ---------- */
+
+  .video-section { padding: clamp(2.75rem, 6vw, 4.5rem) 0; }
+
+  .video-section h2 {
+    font-size: clamp(1.6rem, 3.6vw, 2.3rem);
+    margin: 0 0 1.5rem;
+    letter-spacing: -.01em;
+  }
+
+  .player {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    background: var(--panel);
+    border: 1px solid var(--hairline);
+  }
+
+  .player iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  /* ---------- footer ---------- */
+
+  footer {
+    border-top: 1px solid var(--hairline);
+    padding: 2.5rem 0 4rem;
+    font-size: .82rem;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1.5rem;
+    justify-content: space-between;
+  }
+
+  footer p { margin: 0; }
+
+  @media (max-width: 760px) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .stats { grid-template-columns: 1fr 1fr; }
+
+    .stat {
+      border-top: 1px solid var(--hairline);
+      padding: 1.1rem 1rem;
+    }
+
+    .stat:nth-child(-n+2) { border-top: 0; }
+    .stat:nth-child(odd)  { border-left: 0; padding-left: 0; }
+
+    section.chapter {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .num { padding: 0 0 .35rem; }
+  }
+</style>
+</head>
+<body>
+
+<main class="wrap">
+
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Terrier Group · Northumberland, England</p>
+      <h1>Bedlington<br>Terrier</h1>
+      <p class="deck">A lamb's coat over a lion's heart.</p>
+      <p class="lede">
+        It looks like something that wandered out of a flock — curly, pale, and softly
+        arched. Then it moves, and the disguise falls apart. Underneath that woolly coat
+        is a fast, wiry, unbelievably game little dog bred by coal miners to kill vermin
+        and keep up with a poacher on the run.
+      </p>
+    </div>
+    <figure>
+      <img class="portrait" src="dog.jpg" width="1280" height="1718"
+           alt="A white curly-coated Bedlington Terrier standing indoors, carrying a striped plush toy in its mouth.">
+      <figcaption>The coat is the whole illusion — crisp, curling, and quietly ridiculous.</figcaption>
+    </figure>
+  </header>
+
+  <dl class="stats">
+    <div class="stat">
+      <dt>Height</dt>
+      <dd>15–17.5 in<br>38–44 cm</dd>
+    </div>
+    <div class="stat">
+      <dt>Weight</dt>
+      <dd>17–23 lb<br>8–10 kg</dd>
+    </div>
+    <div class="stat">
+      <dt>Lifespan</dt>
+      <dd>11–16 years</dd>
+    </div>
+    <div class="stat">
+      <dt>AKC recognised</dt>
+      <dd>1886</dd>
+    </div>
+  </dl>
+
+  <section class="chapter">
+    <div class="num">01</div>
+    <div>
+      <h2>Origins</h2>
+      <p>
+        The breed takes its name from Bedlington, a mining town in Northumberland in the
+        north-east of England. Before that it was called the Rothbury Terrier, after the
+        nearby village where the type was concentrated in the early 1800s.
+      </p>
+      <p>
+        Its job description was blunt: kill rats in the pits, work badger and fox above
+        ground, and run down a rabbit for the pot. It kept the company of miners and
+        poachers rather than gentlemen, which is exactly why it was built for speed as
+        much as grit — a dog that had to catch dinner and then leave the field quickly.
+      </p>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="num">02</div>
+    <div>
+      <h2>The look</h2>
+      <p>
+        Nothing about the silhouette is accidental. The head is a narrow pear — wedge-shaped,
+        rounded at the skull, with no stop at all, so the profile runs in one unbroken line
+        from crown to nose. The ears hang flat and finish in a small tassel of fine hair.
+      </p>
+      <p>
+        The back arches over the loin and the tuck-up is deep, giving the same lines you see
+        in a sighthound. That is a galloping frame wearing a terrier's coat. The coat itself
+        is the give-away: a crisp mixture of hard and soft hair that stands off the body and
+        curls, especially on the head and face. It sheds very little.
+      </p>
+      <p>
+        Colours are blue, liver, and sandy, each also seen with tan markings. Puppies are born
+        dark and lighten as they mature — a blue puppy arrives nearly black.
+      </p>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="num">03</div>
+    <div>
+      <h2>Temperament</h2>
+      <p>
+        Indoors, a Bedlington is a mild, affectionate, slightly theatrical companion that would
+        rather be touching you than not. They are quieter in the house than most terriers and
+        attach themselves hard to their people.
+      </p>
+      <p>
+        Outdoors is a different animal. The prey drive is genuine and the acceleration is real,
+        so a reliable recall and a secure fence matter more here than with a comparably sized
+        companion breed. They are game rather than quarrelsome — slow to start something, but
+        historically not built to back down from it either.
+      </p>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="num">04</div>
+    <div>
+      <h2>Living with one</h2>
+      <p>
+        The coat does not shed itself, which means you deal with it instead: clipping and tidying
+        roughly every six to eight weeks, plus regular brushing between visits. In exchange you
+        get a dog that leaves very little hair on the sofa.
+      </p>
+      <p>
+        Exercise needs are about intensity, not duration. A Bedlington that gets to sprint is
+        satisfied; one taken on nothing but slow leash walks generally is not.
+      </p>
+      <div class="note">
+        <strong>One health note worth knowing</strong>
+        <p>
+          The breed carries an inherited copper storage disorder — copper toxicosis — in which
+          copper accumulates in the liver instead of being cleared. It is linked to the COMMD1
+          gene and a DNA test exists, so responsible breeders screen for it. If you are looking
+          at a puppy, ask about the parents' copper testing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h2>See one in motion</h2>
+    <div class="player">
+      <iframe src="https://www.youtube-nocookie.com/embed/5l35Wwj_iBY"
+              title="Bedlington Terrier — AKC Dog Breed Series"
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+    <figcaption>
+      “Bedlington Terrier — AKC Dog Breed Series”, American Kennel Club. If the player does not
+      load, watch it at
+      <a href="https://www.youtube.com/watch?v=5l35Wwj_iBY" target="_blank" rel="noopener">youtube.com/watch?v=5l35Wwj_iBY</a>.
+    </figcaption>
+  </section>
+
+  <footer>
+    <p>eddiekong.com</p>
+    <p>Photograph taken at home.</p>
+  </footer>
+
+</main>
+
+</body>
+</html>
